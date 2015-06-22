@@ -266,6 +266,10 @@ input::-moz-focus-inner {
  */
 input {
   line-height: normal;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  border-radius: 0px;
+  -webkit-appearance: none;
 }
 /**
  * It's recommended that you don't attempt to style these elements.
@@ -475,12 +479,11 @@ body {
   .header--make-full-size {
     padding-bottom: 96px;
     margin-bottom: 25px;
-    background-image: url("../img/iphone-hand-desktop@1x.png"), url("../img/background-fullsize.jpg");
-    background-position: bottom right, top center;
-    background-size: 1040px, cover;
+    background-position: bottom center, top center;
+    background-size: 840px, cover;
   }
   @retina {
-    background-image: url("../img/iphone-hand-desktop@2x.png");
+    background-image: url("../img/iphone-hand-tablet@2x.png");
   }
 }
 .header--make-full-size h1 {
@@ -1024,14 +1027,14 @@ body {
   .footer__map {
     height: 345px;
     margin-bottom: 40px;
-    background-image: url("../img/footer-map-tablet-img.jpg");
-    background-position: 50% 50%;
+    background-image: url("../img/pink-index-tablet-map.jpg");
+    background-position: 43% 50%;
   }
 }
 @media only screen and (min-width: 1200px) {
   .footer__map {
-    background-image: url("../img/index-footer-map-img.jpg");
-    height: 535px;
+    background-image: url("../img/pink-index-desktop-map.jpg");
+    height: 525px;
     margin-bottom: 60px;
   }
 }
