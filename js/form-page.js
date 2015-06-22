@@ -198,7 +198,7 @@ function travelersBox(options) {
                             </div>\
                             <div class="travelers__nick">\
                                 <label for="traveler-nick">Прозвище:</label>\
-                                <input type="text" name="traveler-nick[' + num + ']" tabindex="13" value="" placeholder="Ну как же без этого!" required>\
+                                <input type="text" name="traveler-nick[' + num + ']" tabindex="13" value="" placeholder="Ну как же без этого!">\
                             </div>\
                         </div>';
             return tpl;
