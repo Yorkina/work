@@ -371,7 +371,7 @@ body {
   margin: 0;
   padding: 0;
   font-size: 10px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   line-height: 1;
 }
 @media only screen and (min-width: 700px) {
@@ -387,7 +387,7 @@ body {
   }
 }
 .center-wrapper::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -421,7 +421,7 @@ body {
     background-image: url("../img/background-tablet@2x.jpg");
   }
   .header::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -563,7 +563,7 @@ body {
   position: relative;
 }
 .header__head-line::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -879,7 +879,7 @@ body {
     padding: 0px 61px 35px 61px;
   }
   .footer__contacts::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -1052,7 +1052,7 @@ body {
     padding: 0px 20px 40px 2px;
   }
   .footer--inner-pages::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -1183,7 +1183,7 @@ body {
     margin-bottom: 0px;
   }
   .social-buttons::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -1231,7 +1231,7 @@ body {
     padding: 0px 24px 0px 42px;
   }
   .bottom-line::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -1490,7 +1490,7 @@ body {
   background-image: url("../img/iphone-case-mobile@2x.png");
 }
 .content__promo-info::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -1629,7 +1629,7 @@ body {
     overflow: hidden;
   }
   .content__promo-effect::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -1786,7 +1786,7 @@ body {
   position: absolute;
   width: 900px;
   height: 470px;
-  top: 110%;
+  top: 115%;
   left: -20px;
   z-index: -1;
   background-color: #f2f2f2;
@@ -2044,23 +2044,42 @@ body {
     height: 375px;
   }
 }
+.price-slider input[type="radio"] {
+  display: none;
+  position: absolute;
+}
+.price-slide-wrapper {
+  width: 300%;
+  position: relative;
+  height: 275px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+@media only screen and (min-width: 700px) {
+  .price-slide-wrapper {
+    height: 293px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .price-slide-wrapper {
+    width: 100%;
+    height: 375px;
+  }
+}
 .price-slide {
-  width: 100%;
+  width: 90%;
   position: absolute;
   height: 120px;
-  -webkit-transform: translateX(-259px);
-      -ms-transform: translateX(-259px);
-          transform: translateX(-259px);
+  display: inline-table;
   background-color: #ffffff;
   border-collapse: collapse;
+  margin: 0 auto;
 }
 @media only screen and (min-width: 700px) {
   .price-slide {
-    width: 67%;
-    -webkit-transform: translateX(0px);
-        -ms-transform: translateX(0px);
-            transform: translateX(0px);
-    margin-left: 43px;
+    display: table;
+    margin-left: 35px;
     margin-bottom: 88px;
     border-radius: 10px;
   }
@@ -2097,12 +2116,8 @@ body {
     background-color: #f2f2f2;
     color: #f2f2f2;
     display: block;
-    width: 95px;
+    width: 85px;
   }
-}
-.price-slide th input[type="radio"] {
-  display: none;
-  position: absolute;
 }
 .price-slide td {
   font-size: 1.4rem;
@@ -2183,9 +2198,8 @@ body {
 .price-slide__tarif span {
   font-size: 2.4rem;
   font-weight: 300;
-  text-align: center;
   display: block;
-  width: 100px;
+  text-align: center;
   padding-bottom: 22px;
 }
 @media only screen and (min-width: 700px) {
@@ -2419,6 +2433,51 @@ body {
     top: 10px;
   }
 }
+#button-1:checked ~ .price-slide-wrapper .price-slide {
+  left: 2%;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+@media only screen and (min-width: 700px) {
+  #button-1:checked ~ .price-slide-wrapper .price-slide {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #button-1:checked ~ .price-slide-wrapper .price-slide {
+    left: 0;
+  }
+}
+#button-2:checked ~ .price-slide-wrapper .price-slide {
+  left: -28%;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+@media only screen and (min-width: 700px) {
+  #button-2:checked ~ .price-slide-wrapper .price-slide {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #button-2:checked ~ .price-slide-wrapper .price-slide {
+    left: 0;
+  }
+}
+#button-3:checked ~ .price-slide-wrapper .price-slide {
+  left: -58%;
+  -webkit-transition: 1s;
+          transition: 1s;
+}
+@media only screen and (min-width: 700px) {
+  #button-3:checked ~ .price-slide-wrapper .price-slide {
+    left: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #button-3:checked ~ .price-slide-wrapper .price-slide {
+    left: 0;
+  }
+}
 .toggle__review-slider {
   position: absolute;
   top: 90%;
@@ -2480,6 +2539,14 @@ body {
 #btn-1:checked ~ .toggle label[for="btn-1"],
 #btn-2:checked ~ .toggle label[for="btn-2"],
 #btn-3:checked ~ .toggle label[for="btn-3"] {
+  cursor: pointer;
+  border: 3px solid #1d2631;
+  background: #ffffff;
+  border-radius: 50%;
+}
+#button-1:checked ~ .toggle label[for="button-1"],
+#button-2:checked ~ .toggle label[for="button-2"],
+#button-3:checked ~ .toggle label[for="button-3"] {
   cursor: pointer;
   border: 3px solid #1d2631;
   background: #ffffff;
@@ -3240,7 +3307,7 @@ body {
 }
 .user-info input[type="text"] {
   font-size: 1.8rem;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
   border: 2px solid #e5e5e5;
   line-height: 30px;
@@ -3401,14 +3468,14 @@ body {
   padding: 1px 0 0 52px;
 }
 .type-application__radio:not(checked) + label:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -4px;
   left: -6px;
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: #fff;
+  background: #ffffff;
   border: 2px solid #e5e5e5;
 }
 @media only screen and (min-width: 700px) {
@@ -3417,14 +3484,14 @@ body {
   }
 }
 .type-application__radio:not(checked) + label:after {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   left: 6px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background: #FFF;
+  background: #ffffff;
 }
 .type-application__radio:checked + label:after {
   background-color: #d22856;
@@ -3461,7 +3528,7 @@ body {
     padding: 76px 0px 7px 58px;
   }
   .travel-duration fieldset::after {
-    content: '';
+    content: "";
     display: table;
     clear: both;
   }
@@ -3512,7 +3579,7 @@ body {
 .travel-duration input[type="date"],
 .travel-duration input[type="text"] {
   font-size: 1.8rem;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
   border: 2px solid #e5e5e5;
   line-height: 30px;
@@ -3532,7 +3599,7 @@ body {
 .travel-duration button {
   cursor: pointer;
   font-size: 42px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
   border-top: 2px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5;
@@ -3817,7 +3884,7 @@ body {
 }
 .travelers__count input[type="text"] {
   font-size: 1.8rem;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
   border: 2px solid #e5e5e5;
   line-height: 30px;
@@ -3859,11 +3926,11 @@ body {
 .travelers__count button {
   cursor: pointer;
   font-size: 42px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: inline-block;
   border-top: 2px solid #e5e5e5;
   border-bottom: 2px solid #e5e5e5;
-  background-color: #fff;
+  background-color: #ffffff;
   outline-style: none;
   vertical-align: top;
   width: 61px;
@@ -4014,7 +4081,7 @@ body {
   padding-left: 24px;
 }
 .travelers__names header::after {
-  content: '';
+  content: "";
   display: table;
   clear: both;
 }
@@ -4052,7 +4119,7 @@ body {
 }
 .travelers__names input[type="text"] {
   font-size: 1.8rem;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: block;
   border: 2px solid #e5e5e5;
   line-height: 3rem;
@@ -4130,7 +4197,7 @@ body {
     font-size: 1.3rem;
     font-weight: 400;
     border: none;
-    background-color: #fff;
+    background-color: #ffffff;
     color: #283645;
     text-transform: uppercase;
     margin-left: 51px;
@@ -4181,7 +4248,7 @@ body {
 }
 .travelers__nick input[type="text"] {
   font-size: 1.8rem;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: "Open Sans", Arial, sans-serif;
   display: block;
   border: 2px solid #e5e5e5;
   line-height: 3rem;
@@ -4243,7 +4310,7 @@ body {
   border: 2px solid #e5e5e5;
   border-right: none;
   padding: 22px 26px;
-  background-color: #fff;
+  background-color: #ffffff;
   overflow: hidden;
   width: 10px;
   height: 14px;
@@ -4336,14 +4403,14 @@ body {
   padding: 0 0 0 60px;
 }
 .travel-achievements__checkbox:not(checked) + label:before {
-  content: '';
+  content: "";
   position: absolute;
   top: -4px;
   left: 1px;
   width: 35px;
   height: 35px;
   border: 2px solid #e5e5e5;
-  background: #fff;
+  background: #ffffff;
 }
 .travel-achievements__checkbox:not(checked) + label:after {
   content: "";
@@ -4352,7 +4419,7 @@ body {
   left: 14px;
   width: 15px;
   height: 15px;
-  background: #FFF;
+  background: #ffffff;
 }
 .travel-achievements__checkbox:checked + label:after {
   content: "";
