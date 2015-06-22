@@ -432,7 +432,6 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .header {
-    background-image: url("../img/background-fullsize.jpg");
     background-size: 107%, cover;
     background-position: top center;
     margin-bottom: 36px;
@@ -2517,6 +2516,7 @@ body {
   border: 3px solid #ffffff;
   background: #b5b9be;
   border-radius: 50%;
+  cursor: pointer;
 }
 .toggle a:hover {
   background-color: #7e868f;
@@ -2532,6 +2532,7 @@ body {
   border: 3px solid #ffffff;
   background: #b5b9be;
   border-radius: 50%;
+  cursor: pointer;
 }
 .toggle label:hover {
   background-color: #7e868f;
