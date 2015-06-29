@@ -3262,9 +3262,9 @@ body {
   color: #d22856;
 }
 .user-info {
-  width: 88%;
-  padding: 0px 20px;
-  margin-bottom: 21px;
+  width: 90%;
+  padding: 0px 15px;
+  margin-bottom: 20px;
 }
 @media only screen and (min-width: 700px) {
   .user-info {
@@ -3333,14 +3333,16 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .user-info input[type="text"] {
-    width: 267px;
-    margin-right: 21px;
+    width: 265px;
+    margin-right: 23px;
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
   }
-  .user-info input[type="text"]:nth-child(3) {
+}
+@media only screen and (min-width: 1200px) {
+  .user-info input[type="text"]:last-child {
     margin-right: 0px;
   }
 }
@@ -3407,7 +3409,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .type-application {
-    width: 880px;
+    width: 100%;
   }
 }
 .type-application fieldset {
@@ -3417,12 +3419,11 @@ body {
 @media only screen and (min-width: 700px) {
   .type-application fieldset {
     border: 2px solid #e5e5e5;
-    padding: 47px 0px 14px 64px;
+    padding: 47px 0px 14px 50px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .type-application fieldset {
-    width: 870px;
     font-size: 0px;
   }
 }
@@ -3500,6 +3501,12 @@ body {
 .type-application__radio:checked + label:after {
   background-color: #d22856;
 }
+.type-application__radio:focus + label:before {
+  border-color: #d22856;
+}
+.type-application__radio:checked:focus + label:before {
+  border-color: #d22856;
+}
 .type-application__radio + label {
   cursor: pointer;
 }
@@ -3507,7 +3514,6 @@ body {
   border-color: #283645;
 }
 .travel-duration {
-  padding: 0px 18px 0px 9px;
   margin-bottom: 17px;
 }
 @media only screen and (min-width: 700px) {
@@ -3520,16 +3526,17 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration {
-    width: 880px;
+    width: 100%;
   }
 }
 .travel-duration fieldset {
   border: none;
+  text-align: center;
 }
 @media only screen and (min-width: 700px) {
   .travel-duration fieldset {
     border: 2px solid #e5e5e5;
-    padding: 76px 0px 7px 58px;
+    padding: 50px 0 30px 50px;
   }
   .travel-duration fieldset::after {
     content: "";
@@ -3539,8 +3546,8 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration fieldset {
-    width: 875px;
     font-size: 0px;
+    padding-left: 0px;
   }
 }
 .travel-duration legend {
@@ -3575,8 +3582,6 @@ body {
 @media only screen and (min-width: 1200px) {
   .travel-duration label {
     margin-bottom: 22px;
-    text-align: left;
-    padding-left: 44px;
     margin-bottom: 15px;
   }
 }
@@ -3611,7 +3616,7 @@ body {
   outline-style: none;
   vertical-align: top;
   height: 62px;
-  width: 60px;
+  width: 61px;
 }
 .travel-duration input::-webkit-input-placeholder {
   font-size: 1.8rem;
@@ -3652,7 +3657,7 @@ body {
   display: none;
 }
 .travel-duration__trip-info {
-  width: 250px;
+  width: 85%;
 }
 @media only screen and (min-width: 700px) {
   .travel-duration__trip-info {
@@ -3674,20 +3679,9 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration .trip-info-wrapper {
-    width: 279px;
     display: inline-block;
     float: none;
-  }
-}
-@media only screen and (min-width: 700px) {
-  .travel-duration .trip-info-wrapper label {
-    text-align: left;
-    padding-left: 22px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .travel-duration .trip-info-wrapper label {
-    padding-left: 19px;
+    margin-bottom: 20px;
   }
 }
 @media only screen and (min-width: 700px) {
@@ -3699,26 +3693,14 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration .trip-return-wrapper {
-    width: 279px;
     display: inline-block;
     float: none;
     margin-right: 0;
   }
 }
-@media only screen and (min-width: 700px) {
-  .travel-duration .trip-return-wrapper label {
-    text-align: left;
-    padding-left: 22px;
-  }
-}
-@media only screen and (min-width: 1200px) {
-  .travel-duration .trip-return-wrapper label {
-    padding-left: 19px;
-  }
-}
 .travel-duration__trip-date {
   padding: 14px 0px 14px 0px;
-  width: 130px;
+  width: 45%;
   text-align: center;
   vertical-align: top;
 }
@@ -3746,10 +3728,11 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration .trip-date-wrapper {
-    width: 294px;
     display: inline-block;
     float: none;
     padding: 0px;
+    margin-left: 55px;
+    margin-right: 55px;
   }
 }
 .travel-duration__btn-minus {
@@ -3765,7 +3748,7 @@ body {
   border-top: none;
   border-bottom: none;
   padding-bottom: 3px;
-  width: 62px;
+  width: 63px;
   padding-top: 2px;
   border-left: none;
   padding-right: 19px;
@@ -3805,7 +3788,7 @@ body {
 .travel-duration__btn-plus:focus {
   box-shadow: inset 0px 0px 0px 2px #283645;
   border-top: none;
-  width: 62px;
+  width: 63px;
   border-bottom: none;
   padding-bottom: 3px;
   padding-top: 2px;
@@ -3823,7 +3806,6 @@ body {
   padding-bottom: 32px;
   padding-top: 35px;
   margin-bottom: 40px;
-  padding-left: 10px;
 }
 @media only screen and (min-width: 700px) {
   .travelers {
@@ -3835,23 +3817,22 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travelers {
-    width: 942px;
+    width: 100%;
   }
 }
 .travelers fieldset {
   border: none;
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 700px) {
   .travelers fieldset {
     border: 2px solid #e5e5e5;
-    padding-top: 33px;
+    padding-top: 40px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .travelers fieldset {
-    width: 925px;
-    padding-right: 0px;
-    padding-bottom: 0px;
+    padding: 50px 0px 0px 50px;
   }
 }
 .travelers legend {
@@ -3868,22 +3849,26 @@ body {
   }
 }
 .travelers__count {
-  padding: 32px 0px 32px 0px;
   font-size: 0px;
   display: inline-block;
+  text-align: center;
+  width: 100%;
   border-bottom: 2px solid #e5e5e5;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__count {
     text-align: left;
-    padding: 0px 0px 24px 0px;
+    width: 85%;
     margin: 0px 49px;
     display: block;
   }
 }
 @media only screen and (min-width: 1200px) {
   .travelers__count {
-    margin: 0px 56px 36px 47px;
+    margin: 0px 50px 40px 0px;
+    width: 95%;
   }
 }
 .travelers__count input[type="text"] {
@@ -3893,7 +3878,7 @@ body {
   border: 2px solid #e5e5e5;
   line-height: 30px;
   padding: 14px 12px 14px 16px;
-  margin-bottom: 17px;
+  margin-bottom: 35px;
   outline-style: none;
 }
 .travelers__count input[type="text"]:hover {
@@ -3942,7 +3927,7 @@ body {
   overflow: hidden;
 }
 .travelers__trip-count {
-  width: 129px;
+  width: 45%;
   text-align: center;
   margin-bottom: 18px;
 }
@@ -4058,12 +4043,13 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travelers__info-form {
-    margin-left: 46px;
-    padding: 0px 0px 31px 0px;
+    margin-left: 0px;
+    padding: 0px 0px 50px 0px;
   }
 }
 .travelers__names {
   padding-top: 36px;
+  padding-left: 5px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__names {
@@ -4075,8 +4061,8 @@ body {
     display: inline-block;
     width: 385px;
     position: relative;
-    margin-right: 16px;
-    margin-bottom: 28px;
+    margin-right: 25px;
+    margin-bottom: 30px;
     padding: 0px;
   }
 }
@@ -4094,7 +4080,6 @@ body {
   font-size: 1.4rem;
   font-weight: 400;
   color: #d22856;
-  padding-top: 3px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__names header span {
@@ -4128,8 +4113,9 @@ body {
   border: 2px solid #e5e5e5;
   line-height: 3rem;
   padding: 14px 12px 14px 16px;
-  width: 187px;
+  width: 77%;
   outline-style: none;
+  box-sizing: border-box;
 }
 .travelers__names input[type="text"]:hover {
   border-color: #283645;
@@ -4139,7 +4125,7 @@ body {
 }
 @media only screen and (min-width: 700px) {
   .travelers__names input[type="text"] {
-    width: 267px;
+    width: 265px;
     display: inline-block;
   }
 }
@@ -4218,14 +4204,13 @@ body {
   }
 }
 .travelers__nick {
-  padding-left: 64px;
   padding-top: 26px;
-  padding-bottom: 8px;
+  padding-left: 5px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__nick {
-    padding-left: 85px;
-    padding-bottom: 11px;
+    padding-left: 90px;
+    margin-bottom: 10px;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -4243,7 +4228,7 @@ body {
   color: #d22856;
   text-transform: uppercase;
   padding-bottom: 12px;
-  padding-left: 20px;
+  padding-left: 80px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__nick label {
@@ -4257,8 +4242,10 @@ body {
   border: 2px solid #e5e5e5;
   line-height: 3rem;
   padding: 14px 12px 14px 16px;
-  width: 187px;
+  width: 77%;
   outline-style: none;
+  margin-left: 64px;
+  box-sizing: border-box;
 }
 .travelers__nick input[type="text"]:hover {
   border-color: #283645;
@@ -4269,6 +4256,7 @@ body {
 @media only screen and (min-width: 700px) {
   .travelers__nick input[type="text"] {
     width: 267px;
+    margin-left: 0px;
     display: inline-block;
   }
 }
@@ -4339,7 +4327,8 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-achievements {
-    width: 942px;
+    width: 100%;
+    background-color: #fff;
   }
 }
 .travel-achievements fieldset {
@@ -4355,8 +4344,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-achievements fieldset {
-    width: 880px;
-    padding: 50px 0px 8px 52px;
+    padding: 50px 0px 8px 50px;
     font-size: 0px;
   }
 }
@@ -4436,6 +4424,12 @@ body {
   background-position: -256px -64px;
   background-size: 300px;
 }
+.travel-achievements__checkbox:focus + label:before {
+  border-color: #d22856;
+}
+.travel-achievements__checkbox:checked:focus + label:before {
+  border-color: #d22856;
+}
 .travel-achievements__checkbox + label {
   cursor: pointer;
 }
@@ -4469,13 +4463,14 @@ body {
 @media only screen and (min-width: 700px) {
   .travel-photo fieldset {
     border: 2px solid #e5e5e5;
-    padding: 36px 56px 14px 56px;
+    padding: 36px 55px 14px 55px;
     margin-bottom: 14px;
   }
 }
 @media only screen and (min-width: 1200px) {
   .travel-photo fieldset {
-    padding-bottom: 43px;
+    padding-bottom: 45px;
+    padding: 36px 40px 14px 40px;
   }
 }
 .travel-photo legend {
@@ -4627,6 +4622,7 @@ body {
   font-size: 1.2rem;
   text-transform: uppercase;
   width: 68px;
+  word-wrap: break-word;
 }
 @media only screen and (min-width: 700px) {
   .travel-photo figure figcaption {
