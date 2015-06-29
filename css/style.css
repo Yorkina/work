@@ -3262,13 +3262,12 @@ body {
   color: #d22856;
 }
 .user-info {
-  width: 90%;
   padding: 0px 15px;
   margin-bottom: 20px;
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 700px) {
   .user-info {
-    width: 618px;
     padding: 0px;
     margin-bottom: 35px;
   }
@@ -3317,7 +3316,8 @@ body {
   line-height: 30px;
   padding: 14px 12px 14px 16px;
   margin-bottom: 23px;
-  width: 88%;
+  width: 100%;
+  box-sizing: border-box;
   outline-style: none;
 }
 .user-info input[type="text"]:hover {
@@ -3326,14 +3326,9 @@ body {
 .user-info input[type="text"]:focus {
   border-color: #d22856;
 }
-@media only screen and (min-width: 700px) {
-  .user-info input[type="text"] {
-    width: 590px;
-  }
-}
 @media only screen and (min-width: 1200px) {
   .user-info input[type="text"] {
-    width: 265px;
+    width: 297px;
     margin-right: 23px;
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
@@ -3531,7 +3526,7 @@ body {
 }
 .travel-duration fieldset {
   border: none;
-  text-align: center;
+  padding: 0px 15px;
 }
 @media only screen and (min-width: 700px) {
   .travel-duration fieldset {
@@ -3547,7 +3542,6 @@ body {
 @media only screen and (min-width: 1200px) {
   .travel-duration fieldset {
     font-size: 0px;
-    padding-left: 0px;
   }
 }
 .travel-duration legend {
@@ -3605,6 +3599,24 @@ body {
 .travel-duration input[type="text"]:focus {
   border-color: #d22856;
 }
+.travel-duration input[type="date"] {
+  font-size: 18px;
+  height: 3.445em;
+  box-sizing: border-box;
+}
+.travel-duration input[type="date"]:focus {
+  color: rgba(40, 54, 69, 0.5);
+  -webkit-transition: color 0.5s ease;
+          transition: color 0.5s ease;
+}
+.travel-duration input[type="date"]:disabled {
+  background-color: #f2f2f2;
+}
+.travel-duration input[type="date"]::-webkit-inner-spin-button,
+.travel-duration input[type="date"]::-webkit-calendar-picker-indicator,
+.travel-duration input[type="date"]::-webkit-clear-button {
+  display: none;
+}
 .travel-duration button {
   cursor: pointer;
   font-size: 42px;
@@ -3638,26 +3650,8 @@ body {
   font-weight: 400;
   color: #283645;
 }
-.travel-duration input[type="date"] {
-  font-size: 18px;
-  padding: 14px 12px 14px 16px;
-  height: 1.69em;
-}
-.travel-duration input[type="date"]:focus {
-  color: rgba(40, 54, 69, 0.5);
-  -webkit-transition: color 0.5s ease;
-          transition: color 0.5s ease;
-}
-.travel-duration input[type="date"]:disabled {
-  background-color: #f2f2f2;
-}
-.travel-duration input[type="date"]::-webkit-inner-spin-button,
-.travel-duration input[type="date"]::-webkit-calendar-picker-indicator,
-.travel-duration input[type="date"]::-webkit-clear-button {
-  display: none;
-}
 .travel-duration__trip-info {
-  width: 85%;
+  width: 100%;
 }
 @media only screen and (min-width: 700px) {
   .travel-duration__trip-info {
@@ -3666,7 +3660,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration__trip-info {
-    width: 207px;
+    width: 235px;
     margin-bottom: 20px;
     padding: 14px 19px 14px 8px;
   }
@@ -3700,9 +3694,10 @@ body {
 }
 .travel-duration__trip-date {
   padding: 14px 0px 14px 0px;
-  width: 45%;
+  width: calc(100% - 122px);
   text-align: center;
   vertical-align: top;
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 700px) {
   .travel-duration__trip-date {
@@ -3711,7 +3706,7 @@ body {
 }
 @media only screen and (min-width: 1200px) {
   .travel-duration__trip-date {
-    width: 100px;
+    width: 135px;
     margin-bottom: 20px;
     padding: 14px 8px 14px 0px;
   }
@@ -3822,7 +3817,7 @@ body {
 }
 .travelers fieldset {
   border: none;
-  box-sizing: border-box;
+  padding: 0px 15px;
 }
 @media only screen and (min-width: 700px) {
   .travelers fieldset {
@@ -3851,7 +3846,6 @@ body {
 .travelers__count {
   font-size: 0px;
   display: inline-block;
-  text-align: center;
   width: 100%;
   border-bottom: 2px solid #e5e5e5;
   margin-bottom: 20px;
@@ -3927,9 +3921,10 @@ body {
   overflow: hidden;
 }
 .travelers__trip-count {
-  width: 45%;
+  width: calc(100% - 122px);
   text-align: center;
   margin-bottom: 18px;
+  box-sizing: border-box;
 }
 .travelers__trip-count:hover {
   border-color: #283645;
@@ -3939,7 +3934,7 @@ body {
 }
 @media only screen and (min-width: 700px) {
   .travelers__trip-count {
-    width: 95px;
+    width: 135px;
     border: none;
   }
 }
@@ -4049,7 +4044,6 @@ body {
 }
 .travelers__names {
   padding-top: 36px;
-  padding-left: 5px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__names {
@@ -4113,7 +4107,7 @@ body {
   border: 2px solid #e5e5e5;
   line-height: 3rem;
   padding: 14px 12px 14px 16px;
-  width: 77%;
+  width: calc(100% - 63px);
   outline-style: none;
   box-sizing: border-box;
 }
@@ -4125,8 +4119,13 @@ body {
 }
 @media only screen and (min-width: 700px) {
   .travelers__names input[type="text"] {
-    width: 265px;
+    width: 267px;
     display: inline-block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .travelers__names input[type="text"] {
+    width: 297px;
   }
 }
 .travelers__names input::-webkit-input-placeholder {
@@ -4205,11 +4204,10 @@ body {
 }
 .travelers__nick {
   padding-top: 26px;
-  padding-left: 5px;
 }
 @media only screen and (min-width: 700px) {
   .travelers__nick {
-    padding-left: 90px;
+    padding-left: 82px;
     margin-bottom: 10px;
   }
 }
@@ -4242,9 +4240,9 @@ body {
   border: 2px solid #e5e5e5;
   line-height: 3rem;
   padding: 14px 12px 14px 16px;
-  width: 77%;
+  width: calc(100% - 63px);
   outline-style: none;
-  margin-left: 64px;
+  margin-left: 62px;
   box-sizing: border-box;
 }
 .travelers__nick input[type="text"]:hover {
@@ -4258,6 +4256,11 @@ body {
     width: 267px;
     margin-left: 0px;
     display: inline-block;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .travelers__nick input[type="text"] {
+    width: 297px;
   }
 }
 .travelers__nick input::-webkit-input-placeholder {
@@ -4304,7 +4307,7 @@ body {
   padding: 22px 26px;
   background-color: #ffffff;
   overflow: hidden;
-  width: 10px;
+  width: 8px;
   height: 14px;
 }
 @media only screen and (min-width: 700px) {
